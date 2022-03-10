@@ -1,4 +1,3 @@
----
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
@@ -39,7 +38,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: index.docker.io/tapsme/outer-loop-demo-default@sha256:8b75009c2061a3dc90dda5e129b379b9e572e487f33784385817df07c52a046a
+        image: index.docker.io/tapsme/outer-loop-demo-default@sha256:409a6467ce59f418b0ff47a8a53c934665466ff6baaa76674cf779a7e873ff25
         livenessProbe:
           httpGet:
             path: /livez
